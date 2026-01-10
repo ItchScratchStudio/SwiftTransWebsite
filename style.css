@@ -378,6 +378,14 @@ header {
   font-size: 0.9em;
 }
 
+.pro-badge {
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 6px;
+  margin-right: 4px;
+  display: inline-block;
+}
+
 @media (prefers-color-scheme: dark) {
   .doc-content code {
     background-color: rgba(255, 255, 255, 0.1);
