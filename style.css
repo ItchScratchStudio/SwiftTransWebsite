@@ -119,6 +119,80 @@ header {
   opacity: 0.9;
 }
 
+/* Language Selector */
+.lang-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-selector-toggle {
+  padding: 6px 12px !important;
+  border-radius: 6px;
+  background-color: rgba(0, 122, 255, 0.1);
+  color: var(--primary-color) !important;
+  font-weight: 500 !important;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-selector-toggle:hover {
+  background-color: rgba(0, 122, 255, 0.2);
+  opacity: 1 !important;
+}
+
+.lang-selector-toggle::after {
+  content: "▼";
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.lang-selector-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.lang-selector:hover .lang-selector-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-selector-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--text-primary) !important;
+  font-size: 14px;
+  font-weight: 400 !important;
+  transition: background-color 0.2s;
+  border-radius: 6px;
+  margin: 4px;
+}
+
+.lang-selector-menu a:hover {
+  background-color: rgba(0, 122, 255, 0.1);
+  opacity: 1 !important;
+}
+
+.lang-selector-menu a.current {
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  background-color: rgba(0, 122, 255, 0.05);
+}
+
 /* Hero Section */
 .hero {
   text-align: center;
